@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #ffd1dc);
+  background-size: 300% 300%;
+  animation: bgShift 10s ease infinite;
+}
+
+@keyframes bgShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.screen {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.hidden { display: none; }
+
+.content {
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+}
+
+.question-block h1 { margin-bottom: 10px; }
+
+.options {
+  display: grid;
+  gap: 12px;
+}
+
+.opt {
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  background: #ffd1dc;
+}
+
+.opt:active {
+  animation: shake 0.25s;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-4px); }
+  100% { transform: translateX(0); }
+}
+
+.msg {
+  margin-top: 16px;
+  font-weight: 600;
+  color: #c2185b;
+  min-height: 1.4em;
+}
+
+/* BUTTONS */
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 24px;
+}
+
+#yesZone {
+  background: #4caf50;
+  width: 180px;
+  height: 70px;
+  border-radius: 20px;
+}
+
+.glow {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 rgba(76,175,80,0.5); }
+  50% { box-shadow: 0 0 20px rgba(76,175,80,0.8); }
+  100% { box-shadow: 0 0 0 rgba(76,175,80,0.5); }
+}
+
+#yesBtn {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.no-wrapper {
+  position: relative;
+  width: 180px;
+  height: 140px;
+}
+
+#noBtn {
+  position: absolute;
+  width: 180px;
+  height: 70px;
+  background: #f44336;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  transition: left 0.25s ease, top 0.25s ease;
+}
+
+/* HEARTS */
+#hearts span {
+  position: fixed;
+  bottom: -20px;
+  font-size: 24px;
+  animation: floatUp 6s linear infinite;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-100vh); opacity: 0; }
+}
+
+/* FINAL */
+#slideshow {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.letter {
+  text-align: left;
+  line-height: 1.7;
+}
