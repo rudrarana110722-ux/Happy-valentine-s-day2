@@ -1,1 +1,21 @@
+body{
+  font-family: Arial, sans-serif;
+  background: pink;
+  text-align: center;
+  padding-top: 100px;
+}
 
+.screen{
+  display: block;
+}
+
+.hidden{
+  display: none;
+}
+
+button{
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
